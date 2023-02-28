@@ -1,10 +1,9 @@
 <script setup>
 import { storeToRefs } from 'pinia';
-
 import { useUsersStore } from '@/stores';
 
 const usersStore = useUsersStore();
-const { users } = storeToRefs(usersStore);
+const { users } = storeToRefs(usersStore);//receive data from pinia store
 
 usersStore.getAll();
 </script>
