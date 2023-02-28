@@ -22,7 +22,7 @@ async function onSubmit(values) {
     const alertStore = useAlertStore();
     try {
         await usersStore.register(values);
-        await router.push('/account/login');
+        await router.push('/account/login');//dynamic navigation
         alertStore.success('Registration successful');
     } catch (error) { 
         alertStore.error(error);
