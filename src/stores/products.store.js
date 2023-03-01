@@ -13,6 +13,11 @@ export const useProductsStore = defineStore({
         }]
     }),
     actions: {
+        async save(product){
+          console.log('action', product);  
+          console.log(this.products);
+          this.products.push(product);
+        },
         async getAll() {
             
             // this.products = { loading: true };
